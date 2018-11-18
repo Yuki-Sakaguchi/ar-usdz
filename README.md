@@ -2,7 +2,7 @@
 AR.jsを試してみる
 
 ## DEMO
-[カメラ](https://yuki-sakaguchi.github.io/ar/)  
+[カメラ](https://yuki-sakaguchi.github.io/ar/index.html)  
 [画像](https://yuki-sakaguchi.github.io/ar/images/HERO.jpg)
 
 ## 参考
