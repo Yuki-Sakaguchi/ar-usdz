@@ -6,5 +6,5 @@ AR.jsを試してみる
 [画像](https://yuki-sakaguchi.github.io/ar/image.html)
 
 ## 参考
-https://github.com/jeromeetienne/AR.js#augmented-reality-for-the-web-in-less-than-10-lines-of-html  
+https://github.com/jeromeetienne/AR.js#augmented-reality-for-the-web-in-less-than-10-lines-of-html   
 https://liginc.co.jp/426106  
