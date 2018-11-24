@@ -12,33 +12,44 @@
     <a-scene embedded arjs="debugUIEnabled:false;">
 
         <!-- OBJ形式のCGモデルの読み込み -->
-        <a-assets>
-          <a-asset-item id="obj" src="3d/rocket.obj"></a-asset-item>   <!-- objファイル -->
-          <a-asset-item id="mtl" src="3d/rocket.mtl"></a-asset-item>   <!-- mtlファイル -->
-        </a-assets>
+        <a-scene stats altspace scale="0.005 0.005 0.005">
+          <a-assets>
+            <video id="videoParis" preload="auto"
+                   src="movie/movie1.mp4"
+                   width="160" height="90" autoplay loop="true"
+                   crossOrigin="anonymous"></video>
+            <video id="videoHypercube" preload="auto"
+                   src="movie/movie2.mp4"
+                   width="160" height="90" autoplay loop="true"
+                   crossOrigin="anonymous"></video>
+          </a-assets>
+  
   
         <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
         <a-marker preset="hiro">
-          <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
-          <a-box position="0 0.5 0" wireframe="true"></a-box>
-        </a-marker>
-  
-        <!-- マーカーを登録（プリセットされている「kanji」マーカー） -->
-        <a-marker preset="kanji">
-          <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
-          <a-obj-model
-            src="#obj"
-            mtl="#mtl"
-            scale="0.005 0.005 0.005"
-            position="0 0.5 0">
-            <a-animation
-              attribute="rotation"
-              to="0 360 0"
-              dur="3000"
-              easing="linear"
-              repeat="indefinite">
-            </a-animation>
-          </a-obj-model>
+          <!--
+          SOURCE
+          Title:  Paris Sunset - Timelapse (Public Domain)
+          Author: Mythomen <https://vimeo.com/mythomen>
+          URL:    https://vimeo.com/147309712
+          -->
+          <a-entity material="shader: flat; src: #videoParis"
+                    geometry="primitive: plane; width: 160; height: 90;"
+                    position="0 60 -250"
+                    rotation="0 35 0">
+          </a-entity>
+    
+          <!--
+          SOURCE
+          Title:  Hypercube Study
+          Author: Dan Allison <https://vimeo.com/danallison>
+          URL:    https://vimeo.com/5081158
+          -->
+          <a-entity material="shader: flat; src: #videoHypercube"
+                    geometry="primitive: plane; width: 160; height: 90"
+                    position="0 -60 -200"
+                    rotation="0 -35 0">
+          </a-entity>
         </a-marker>
   
         <!-- AR用のカメラを置く -->

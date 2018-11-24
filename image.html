@@ -51,22 +51,6 @@
     </div>
     <div class="controller">
       <div class="btn" data-target="hiro">Hiro</div>
-      <div class="btn" data-target="rocket">rocket</div>
     </div>
-    <script>
-      var activeClass = 'js-active';
-      var elImg = document.querySelectorAll('.object-img');
-      var elBtn = document.querySelectorAll('.btn');
-
-      for (var i = 0; i < elBtn.length; i++) {
-        elBtn[i].addEventListener('click', function(e) {
-          for (var j = 0; j < elImg.length; j++) {
-            elImg[j].classList.remove(activeClass);
-          }
-          var data = this.dataset.target;
-          document.querySelector('#' + data).classList.add(activeClass);
-        });
-      }
-    </script>
   </body>
 </html>
