@@ -10,21 +10,19 @@
   </head>
   <body style='margin: 0; overflow: hidden;'>
     <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
-    <a-scene embedded arjs="debugUIEnabled:false;">
+      <!-- OBJ形式のCGモデルの読み込み -->
+      <a-scene embedded arjs="debugUIEnabled:false;">
+        <a-assets>
+          <!-- <video id="videoParis" preload="auto"
+                  src="movie/movie1.mp4"
+                  width="160" height="90" autoplay loop="true"
+                  crossOrigin="anonymous"></video> -->
+          <video id="videoHypercube" preload="auto"
+                  src="movie/movie2.mp4"
+                  width="160" height="90" autoplay loop="true"
+                  crossOrigin="anonymous"></video>
+        </a-assets>
 
-        <!-- OBJ形式のCGモデルの読み込み -->
-        <a-scene stats altspace scale="0.005 0.005 0.005">
-          <a-assets>
-            <!-- <video id="videoParis" preload="auto"
-                   src="movie/movie1.mp4"
-                   width="160" height="90" autoplay loop="true"
-                   crossOrigin="anonymous"></video> -->
-            <video id="videoHypercube" preload="auto"
-                   src="movie/movie2.mp4"
-                   width="160" height="90" autoplay loop="true"
-                   crossOrigin="anonymous"></video>
-          </a-assets>
-  
   
         <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
         <a-marker preset="hiro">
