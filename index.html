@@ -19,7 +19,11 @@
 
         <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
         <a-marker preset="hiro">
-          <a-video src="#penguin-sledding" width="16" height="9" position="0 0 -20"></a-video>
+          <a-entity material="shader: flat; src: #videoHypercube"
+                    geometry="primitive: plane; width: 160; height: 90"
+                    position="0 -60 -200"
+                    rotation="0 0 0">
+          </a-entity>
         </a-marker>
   
         <!-- AR用のカメラを置く -->
