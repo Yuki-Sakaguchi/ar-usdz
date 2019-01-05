@@ -8,4 +8,5 @@ AR.jsを試してみる
 ## 参考
 https://github.com/jeromeetienne/AR.js#augmented-reality-for-the-web-in-less-than-10-lines-of-html   
 https://liginc.co.jp/426106   
-https://qiita.com/mkoku/items/c635566e829c303a7d3f
+https://qiita.com/mkoku/items/c635566e829c303a7d3f  
+https://stackoverflow.com/questions/51363819/how-to-load-or-play-video-playback-when-the-marker-is-detected-hiro
