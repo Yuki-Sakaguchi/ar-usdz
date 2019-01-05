@@ -10,30 +10,26 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
   </head>
   <body style='margin: 0; overflow: hidden;'>
-    <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
-      <!-- OBJ形式のCGモデルの読み込み -->
-      <a-scene embedded arjs="debugUIEnabled:false;" stats altspace scale="0.005 0.005 0.005" vr-mode-ui="enabled: false">
-        <a-assets>
-          <video id="videoHypercube" preload="auto"
-                 src="movie/movie1.mp4"
-                 width="80" height="45" autoplay loop="true" playsinline
-                 crossOrigin="anonymous"></video>
-        </a-assets>
 
-        <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
-        <a-marker preset="hiro">
-          <a-entity material="shader: flat; src: #videoHypercube"
-                    geometry="primitive: plane; width: 80; height: 45"
-                    position="0 -30 -100"
-                    rotation="0 0 0">
-          </a-entity>
-        </a-marker>
-  
-        <!-- AR用のカメラを置く -->
-        <a-entity camera></a-entity>
-      </a-scene>
+    <!-- AR.jsのシーン追加 -->
+    <a-scene embedded arjs='trackingMethod: best;'>
+      
+      <!-- videoを設定 -->
+      <a-anchor hit-testing-enabled='true'>
+        <a-entity>
+          <video type="video/mp4" id="penguin-sledding" autoplay="true" loop="false" src="movie/movie1.mp4" webkit-playsinline>
+        </a-entity>
+        <a-video  position="0 0.2 0" src="#penguin-sledding" rotation="90 180 0"></a-video>
+      </a-anchor>
+
+      <!-- AR用のカメラを置く -->
+      <a-camera-static preset='hiro'/>
+      <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
+    </a-scene>
+
+    <!-- videoの再生 -->
     <script>
-      var elVideo = document.getElementById('videoHypercube');
+      var elVideo = document.getElementById('penguin-sledding');
       window.addEventListener('click', function() {
         elVideo.play();
       });
