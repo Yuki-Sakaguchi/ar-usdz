@@ -1,12 +1,9 @@
-# ar
-AR.jsを試してみる
+# usdzのARを使ってみる
 
 ## DEMO
-[カメラ](https://yuki-sakaguchi.github.io/ar/index.html)  
-[画像](https://yuki-sakaguchi.github.io/ar/image.html)
+https://yuki-sakaguchi.github.io/ar-usdz/
 
 ## 参考
-https://github.com/jeromeetienne/AR.js#augmented-reality-for-the-web-in-less-than-10-lines-of-html   
-https://liginc.co.jp/426106   
-https://qiita.com/mkoku/items/c635566e829c303a7d3f  
-https://stackoverflow.com/questions/51363819/how-to-load-or-play-video-playback-when-the-marker-is-detected-hiro
+* [ARKit 2.0 でAR経験を共有できるようになりました。あと、アプリを実装しなくてもARできます。 - Toyship.org](https://www.toyship.org/2018/06/05/193435)  
+* https://prtimes.jp/main/html/rd/p/000000010.000030345.html  
+* [ARKit - AR Quick Look Gallery - Apple Developer](https://developer.apple.com/arkit/gallery/)  
